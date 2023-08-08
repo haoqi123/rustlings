@@ -25,8 +25,7 @@ fn char_counter<T:AsRef<str>>(arg: T) -> usize {
 fn num_sq<T:AsMut<u32>>(arg: &mut T) {
     // TODO: Implement the function body.
     let value = arg.as_mut();
-    let result = (&*value).pow(2);
-    *value = result;
+    *value = value.pow(2);
 }
 
 #[cfg(test)]
